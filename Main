@@ -1,0 +1,117 @@
+// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
+// then press Enter. You can now see whitespace characters in your code.
+//Initialize a 2D array for each of the following types: int, double, boolean, String, an original object.
+//        At least one of your initializations should include an initializer list.
+//        Modify and access each 2D array.
+//        Traverse each array in row-major and column-major order.
+public class Main {
+    public static void main(String[] args) {
+        int[][] twodee = {{1, 2, 3}, {4, 5, 6}};
+        double [][] twodeetwo = {{1.0, 2.0, 3.0}, {4.0, 5.0, 6.0}};
+        boolean [] [] twodeethree= {{true, false, true}, {false, true, false}};
+        String [][] twodeefour = {{"hello", "world", "people"}, {"people", "world", "hello"}};
+        
+        Koosh [] [] kooshball = {{new Koosh(), new Koosh(), new Koosh()}, {new Koosh(), new Koosh(), new Koosh()}};
+        kooshball[0][1] = new Koosh();
+        
+        traverser1(twodee);
+        System.out.println();
+        traverser2(twodeetwo);
+        System.out.println();
+        traverser3(twodeethree);
+        System.out.println();
+        traverser4(twodeefour);
+        System.out.println();
+        traverser5(kooshball);
+        System.out.println();
+        traverser6(twodee);
+        System.out.println();
+        traverser7(twodeetwo);
+        System.out.println();
+        traverser8(twodeethree);
+        System.out.println();
+        traverser9(twodeefour);
+        System.out.println();
+        traverser10(kooshball);
+    }
+    public static void traverser1(int[][] a){
+        for (int r = 0; r<a.length; r++){
+            for(int c = 0; c<a[0].length; c++){
+                a[r][c] +=2;
+                System.out.print(a[r][c] + " ");
+            }
+        }
+    }
+    public static void traverser2(double[][] a){
+        for (int r = 0; r<a.length; r++){
+            for(int c = 0; c<a[0].length; c++){
+                a[r][c] +=2;
+                System.out.print(a[r][c] + " ");
+            }
+        }
+    }
+    public static void traverser3(boolean[][] a){
+        for (int r = 0; r<a.length; r++){
+            for(int c = 0; c<a[0].length; c++){
+                a[r][c] = !a[r][c];
+                System.out.print(a[r][c] + " ");
+            }
+        }
+    }
+    public static void traverser4(String[][] a){
+        for (int r = 0; r<a.length; r++){
+            for(int c = 0; c<a[0].length; c++){
+                a[r][c] +="!";
+                System.out.print(a[r][c] + " ");
+            }
+        }
+
+    }
+    public static void traverser5(Koosh[][] a){
+        for (int r = 0; r<a.length; r++){
+            for(int c = 0; c<a[0].length; c++){
+                System.out.print(a[r][c] + " ");
+            }
+        }
+    }
+    public static void traverser6(int[][] a){
+        for (int c = 0; c<a[0].length; c++){
+            for(int r = 0; r<a.length; r++){
+                a[r][c] -=2;
+                System.out.print(a[r][c] + " ");
+            }
+        }
+    }
+    public static void traverser7(double[][] a){
+        for (int c = 0; c<a[0].length; c++){
+            for(int r = 0; r<a.length; r++){
+                a[r][c] -=2;
+                System.out.print(a[r][c] + " ");
+            }
+        }
+    }
+    public static void traverser8(boolean[][] a){
+        for (int c = 0; c<a[0].length; c++){
+            for(int r = 0; r<a.length; r++){
+                a[r][c] = !a[r][c];
+                System.out.print(a[r][c] + " ");
+            }
+        }
+    }
+    public static void traverser9(String[][] a){
+        for (int c = 0; c<a[0].length; c++){
+            for(int r = 0; r<a.length; r++){
+                a[r][c] +="!";
+                System.out.print(a[r][c] + " ");
+            }
+        }
+    }
+    public static void traverser10(Koosh[][] a){
+        for (int c = 0; c<a[0].length; c++){
+            for(int r = 0; r<a.length; r++){
+                System.out.print(a[r][c] + " ");
+            }
+        }
+    }
+
+}
