@@ -1,0 +1,6 @@
+public class Koosh {
+    private int size;
+    private String color;
+    private int bounce;
+
+}
